@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-24 15:42:34.365296",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "mobile_number",
+  "arrival_time_at_hotel",
+  "section_break_mkxk",
+  "preferred_partner_name",
+  "preferred_partner_mobile_number",
+  "section_break_mrdu",
+  "jito_chapter",
+  "section_break_wwbi",
+  "status",
+  "conflict_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "arrival_time_at_hotel",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Arrival Time at Hotel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_mkxk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_mrdu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "jito_chapter",
+   "fieldtype": "Select",
+   "label": "JITO Chapter",
+   "options": "EAST Guwahati\nEAST Imphal\nEAST Kolkata\nEAST Ranchi\nGUJ Ahmedabad\nGUJ Bhavnagar\nGUJ Bhuj\nGUJ Gandhidham\nGUJ Rajkot\nGUJ Surat\nGUJ Vadodara\nGUJ Vapi\nKKG Ballari\nKKG Bangalore North\nKKG Bangalore South\nKKG Belgaum\nKKG Bijapur\nKKG Davangere\nKKG Gadag\nKKG Hosapete\nKKG Hubli\nKKG Mysore\nKKG Shimoga\nMPCG Balaghat\nMPCG Bhopal\nMPCG Durg-Bhilai\nMPCG Indore\nMPCG Jabalpur\nMPCG Mandsaur\nMPCG Raipur\nMPCG Seoni\nMUMBAI Ghatkopar\nMUMBAI Goregaon\nMUMBAI Gowalia Tank\nMUMBAI Juhu\nMUMBAI Kalyan-Dombivali\nMUMBAI Midtown-Byuclla\nMUMBAI Mulund\nMUMBAI Navi Mumbai\nMUMBAI Queens' Necklace\nMUMBAI Thane\nNORTH Agra\nNORTH Aligarh\nNORTH Ambala\nNORTH Chandigarh\nNORTH East Delhi\nNORTH Faridabad\nNORTH Ghaziabad\nNORTH Gurugram\nNORTH Hisar\nNORTH Jalandhar\nNORTH Kanpur\nNORTH Lucknow\nNORTH Ludhiana\nNORTH New Delhi\nNORTH Noida\nNORTH North Delhi\nNORTH Panipath\nNORTH Uttarakhand\nNORTH YamunaNagar\nRAJASTHAN Ajmer\nRAJASTHAN Balotra\nRAJASTHAN Barmer\nRAJASTHAN Beawar\nRAJASTHAN Bhilwara\nRAJASTHAN Bikaner\nRAJASTHAN Chittorgarh\nRAJASTHAN Jaipur\nRAJASTHAN Jodhpur\nRAJASTHAN Kishangarh\nRAJASTHAN Kota\nRAJASTHAN Pali\nRAJASTHAN Udaipur\nROM Ahmednagar\nROM Akola\nROM Amalner\nROM Aurangabad\nROM Beed\nROM Chinchwad Pimpri\nROM Dhule\nROM Fattepur\nROM Ichalkaranji\nROM Jalana\nROM Jalgaon\nROM Jamner-Bhusawal\nROM Kolhapur\nROM Malegaon\nROM Nagpur\nROM Nashik\nROM Pachora\nROM Pahur\nROM Pune\nROM Shenduri\nROM Shinkheda\nROM Shirpur\nTNAPTS Chennai Foundation\nTNAPTS Chennai Plus\nTNAPTS Coimbatore\nTNAPTS Erode\nTNAPTS Guntur\nTNAPTS Hyderabad\nTNAPTS Vijayawada\nTNAPTS Visakhapatnam\nMEERUT\nWALKESHWAR\nUJJAIN\nNEEMUCH\nINTERNATIONAL Dubai\nINTERNATIONAL Katmandu-Nepal\nINTERNATIONAL Thailand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_wwbi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nMatched\nConflict\nPartner Already Requested\nPartner Chose Someone Else"
+  },
+  {
+   "fieldname": "conflict_reason",
+   "fieldtype": "Small Text",
+   "label": "Conflict Reason"
+  },
+  {
+   "fieldname": "preferred_partner_name",
+   "fieldtype": "Data",
+   "label": "Preferred Partner Name"
+  },
+  {
+   "fieldname": "preferred_partner_mobile_number",
+   "fieldtype": "Data",
+   "label": "Preferred Partner Mobile Number"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-26 03:02:35.480606",
+ "modified_by": "Administrator",
+ "module": "JYCC FORM",
+ "name": "Registration Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JYCC Event Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JYCC Guest",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

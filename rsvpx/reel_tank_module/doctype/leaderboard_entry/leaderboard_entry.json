@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-18 17:56:58.455443",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "creator",
+  "reel_submission",
+  "reel_score",
+  "column_break_bgyn",
+  "score",
+  "rank"
+ ],
+ "fields": [
+  {
+   "fieldname": "creator",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Creator",
+   "options": "Reel Creator"
+  },
+  {
+   "fieldname": "reel_submission",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reel Submission",
+   "options": "Reel Submission"
+  },
+  {
+   "fieldname": "reel_score",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reel Score",
+   "options": "Reel Score"
+  },
+  {
+   "fieldname": "rank",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Rank"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Score"
+  },
+  {
+   "fieldname": "column_break_bgyn",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-19 10:48:45.220382",
+ "modified_by": "Administrator",
+ "module": "Reel Tank Module",
+ "name": "Leaderboard Entry",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

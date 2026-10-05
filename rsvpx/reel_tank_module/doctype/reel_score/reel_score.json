@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-18 17:42:48.551262",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reel_submission",
+  "reel_metrics",
+  "views_score",
+  "rank",
+  "column_break_krjm",
+  "engagement_score",
+  "bonus_score",
+  "penalty_score",
+  "final_score",
+  "calculated_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "reel_submission",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reel Submission",
+   "options": "Reel Submission",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reel_metrics",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reel Metrics",
+   "options": "Reel Metrics",
+   "reqd": 1
+  },
+  {
+   "fieldname": "views_score",
+   "fieldtype": "Float",
+   "label": "Views Score"
+  },
+  {
+   "fieldname": "rank",
+   "fieldtype": "Int",
+   "label": "Rank"
+  },
+  {
+   "fieldname": "column_break_krjm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "engagement_score",
+   "fieldtype": "Float",
+   "label": "Engagement Score"
+  },
+  {
+   "fieldname": "bonus_score",
+   "fieldtype": "Float",
+   "label": "Bonus Score"
+  },
+  {
+   "fieldname": "penalty_score",
+   "fieldtype": "Float",
+   "label": "Penalty Score"
+  },
+  {
+   "fieldname": "final_score",
+   "fieldtype": "Float",
+   "label": "Final Score"
+  },
+  {
+   "fieldname": "calculated_on",
+   "fieldtype": "Date",
+   "label": "Calculated On"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-22 15:25:53.894902",
+ "modified_by": "Administrator",
+ "module": "Reel Tank Module",
+ "name": "Reel Score",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

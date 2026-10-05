@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-17 16:11:58.838513",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "participant",
+  "column_break_uirg",
+  "role",
+  "joined_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "participant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant",
+   "options": "Participant"
+  },
+  {
+   "fieldname": "column_break_uirg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Role",
+   "options": "Leader\nMember\nMentor"
+  },
+  {
+   "fieldname": "joined_on",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Joined On"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-18 15:26:08.221184",
+ "modified_by": "Administrator",
+ "module": "Team Management",
+ "name": "Team Member",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

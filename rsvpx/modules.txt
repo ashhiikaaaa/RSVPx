@@ -1,1 +1,21 @@
 RSVP X
+Event Management
+User and Access Management
+Attendance and Check-In
+Dynamic Form Builder
+Registration Engine
+Participation Management
+QR Pass Management
+Email Communication
+Payment Management
+Team Management
+Invitation Management
+Reel Tank 
+Apify Integration Engine
+Reports and Analytics
+Integration Hub
+Audit and Compliance
+Scheduler and Background Jobs
+WhatsApp and OTP Module
+Reel Tank Module
+JYCC FORM

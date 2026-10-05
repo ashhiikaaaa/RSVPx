@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-17 16:07:21.745596",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "label",
+  "field_name",
+  "field_type",
+  "field_purpose",
+  "required",
+  "is_active",
+  "show_in_qr",
+  "qr_display_order"
+ ],
+ "fields": [
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Label",
+   "reqd": 1
+  },
+  {
+   "fieldname": "field_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Field Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "field_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Field Type",
+   "options": "Data\nSmall Text\nLong Text\nEmail\nPhone\nNumber\nFloat\nCurrency\nDate\nDatetime\nTime\nCheck\nSelect\nAttach Image",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "field_purpose",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Field Purpose",
+   "options": "Name\nEmail\nPhone\nIdentifier\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "show_in_qr",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Show in QR"
+  },
+  {
+   "fieldname": "qr_display_order",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "QR Display Order"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-07-21 22:10:46.224983",
+ "modified_by": "Administrator",
+ "module": "Dynamic Form Builder",
+ "name": "Form Field",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,384 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2026-06-17 16:03:48.439102",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "event_details_section",
+  "event",
+  "event_code",
+  "slug",
+  "column_break_hnbr",
+  "type_of_event",
+  "other",
+  "status",
+  "naming_series",
+  "section_break_dfyk",
+  "registration_start_date",
+  "start_date",
+  "column_break_hylv",
+  "registration_end_date",
+  "end_date",
+  "event_admin_details_section",
+  "admin_name",
+  "admin_email",
+  "mobile_number",
+  "column_break_mafk",
+  "company",
+  "address",
+  "logo",
+  "otp_verification_section",
+  "email_verified",
+  "entered_otp"
+ ],
+ "fields": [
+  {
+   "fieldname": "event",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Event ",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "event_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Event Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "label": "Slug",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_hnbr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Event start date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "Event end date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "section_break_dfyk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Ongoing\nDraft\nPublished\nRegistration Closed\nCompleted\nCancelled",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hylv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "event_details_section",
+   "fieldtype": "Section Break",
+   "label": "Event Details"
+  },
+  {
+   "fieldname": "type_of_event",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Event",
+   "options": "Conference\nHackathon\nWorkshop\nCompetition\nSeminar\nSpeaker Session\nCollege Fest\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_start_date",
+   "fieldtype": "Date",
+   "label": "Registration start date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_end_date",
+   "fieldtype": "Date",
+   "label": "Registration end date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_admin_details_section",
+   "fieldtype": "Section Break",
+   "label": "Event Admin Details"
+  },
+  {
+   "fieldname": "column_break_mafk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "admin_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Admin Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "admin_email",
+   "fieldtype": "Link",
+   "label": "Admin Email",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "default": "EVT-.YYYY.-.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming series",
+   "options": "EVT-.YYYY.-.####"
+  },
+  {
+   "depends_on": "eval:doc.type_of_event==\"Other\"",
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number",
+   "length": 12,
+   "reqd": 1,
+   "width": "12"
+  },
+  {
+   "fieldname": "otp_verification_section",
+   "fieldtype": "Section Break",
+   "label": "OTP verification"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_verified",
+   "fieldtype": "Check",
+   "label": "Email Verified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "entered_otp",
+   "fieldtype": "Data",
+   "label": "Enter OTP"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "logo",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Event Creation",
+   "link_doctype": "Event Settings",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Event Creation",
+   "link_doctype": "Event Branding",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Event Creation",
+   "link_doctype": "Event Domain",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Event Creation",
+   "link_doctype": "Gate",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Event Handling",
+   "link_doctype": "Event User",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Event Handling",
+   "link_doctype": "Event Team Member",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Event Handling",
+   "link_doctype": "Gatekeeper",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Registration Flow",
+   "link_doctype": "Form Template",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Registration Flow",
+   "link_doctype": "Registration Submission",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Registration Flow",
+   "link_doctype": "Participant",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Registration Flow",
+   "link_doctype": "QR Pass",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "TEAM",
+   "hidden": 1,
+   "link_doctype": "Team",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "PAYMENT",
+   "hidden": 1,
+   "link_doctype": "Payment Order",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "INVITE",
+   "hidden": 1,
+   "link_doctype": "Invite Category",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "INVITE",
+   "hidden": 1,
+   "link_doctype": "Invite Registration",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "INVITE",
+   "hidden": 1,
+   "link_doctype": "Invite Allocation",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "WHATSAPP",
+   "hidden": 1,
+   "link_doctype": "Whatsapp Template",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "REEL TANK",
+   "hidden": 1,
+   "link_doctype": "Reel Creator",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "REEL TANK",
+   "hidden": 1,
+   "link_doctype": "Reel Submission",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "WHATSAPP",
+   "hidden": 1,
+   "link_doctype": "Whatsapp Message Log",
+   "link_fieldname": "event"
+  }
+ ],
+ "modified": "2026-07-28 12:12:36.638922",
+ "modified_by": "Administrator",
+ "module": "Event Management",
+ "name": "RSVPX Event",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Team Member",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gatekeeper",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "event"
+}

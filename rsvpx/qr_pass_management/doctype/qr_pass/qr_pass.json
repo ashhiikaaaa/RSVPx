@@ -1,0 +1,213 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2026-07-22 14:39:13.628111",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "participant",
+  "event",
+  "registration_submission",
+  "naming_series",
+  "column_break_gjpu",
+  "qr_token",
+  "qr_image",
+  "pass_status",
+  "qr_data",
+  "section_break_kwvf",
+  "generated_on",
+  "checked_in_on",
+  "gate",
+  "column_break_ehah",
+  "expiry_date",
+  "checked_in_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "participant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant",
+   "options": "Participant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "label": "Event",
+   "options": "RSVPX Event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gjpu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qr_token",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "QR Token"
+  },
+  {
+   "fieldname": "qr_image",
+   "fieldtype": "Attach Image",
+   "label": "QR Image"
+  },
+  {
+   "fieldname": "pass_status",
+   "fieldtype": "Select",
+   "label": "Pass Status",
+   "options": "Generated\nActive\nUsed\nExpired\nRevoked",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_kwvf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "generated_on",
+   "fieldtype": "Datetime",
+   "label": "Generated On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ehah",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Datetime",
+   "label": "Expiry Date"
+  },
+  {
+   "default": "QR-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "QR-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_submission",
+   "fieldtype": "Link",
+   "label": "Registration Submission",
+   "options": "Registration Submission"
+  },
+  {
+   "fieldname": "qr_data",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "QR Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "checked_in_on",
+   "fieldtype": "Datetime",
+   "label": "Checked in On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "checked_in_by",
+   "fieldtype": "Link",
+   "label": "Checked in By",
+   "options": "Gatekeeper"
+  },
+  {
+   "fieldname": "gate",
+   "fieldtype": "Link",
+   "label": "Gate",
+   "options": "Gate"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "qr_image",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Check In log",
+   "link_fieldname": "qr_pass"
+  }
+ ],
+ "modified": "2026-07-24 01:55:10.028963",
+ "modified_by": "Administrator",
+ "module": "QR Pass Management",
+ "name": "QR Pass",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Team Member",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Participant",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gatekeeper",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant"
+}

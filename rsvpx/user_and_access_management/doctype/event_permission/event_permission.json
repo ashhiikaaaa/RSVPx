@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-17 16:06:13.868020",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "can_view_participants",
+  "can_edit_participants",
+  "can_approvereject_participants",
+  "can_assign_bib_numbers",
+  "can_access_finaleinvite_track",
+  "can_access_reel_tank_module",
+  "can_downloadexport_data",
+  "can_send_whatsapp_messages",
+  "can_view_reports_only",
+  "can_manage_payments"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "can_view_participants",
+   "fieldtype": "Check",
+   "label": "Can view participants"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_edit_participants",
+   "fieldtype": "Check",
+   "label": "Can edit participants "
+  },
+  {
+   "default": "0",
+   "fieldname": "can_approvereject_participants",
+   "fieldtype": "Check",
+   "label": "Can approve/reject participants "
+  },
+  {
+   "default": "0",
+   "fieldname": "can_assign_bib_numbers",
+   "fieldtype": "Check",
+   "label": "Can assign BIB numbers"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_access_finaleinvite_track",
+   "fieldtype": "Check",
+   "label": "Can access finale/invite track"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_access_reel_tank_module",
+   "fieldtype": "Check",
+   "label": "Can access reel tank module"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_downloadexport_data",
+   "fieldtype": "Check",
+   "label": "Can download/export data"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_send_whatsapp_messages",
+   "fieldtype": "Check",
+   "label": "Can send whatsapp messages"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_view_reports_only",
+   "fieldtype": "Check",
+   "label": "Can view reports only"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_manage_payments",
+   "fieldtype": "Check",
+   "label": "Can manage payments"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [
+  {
+   "link_doctype": "Event User",
+   "link_fieldname": "user"
+  },
+  {
+   "link_doctype": "Event Team Member",
+   "link_fieldname": "event_team_member"
+  }
+ ],
+ "modified": "2026-06-22 11:39:50.752215",
+ "modified_by": "Administrator",
+ "module": "User and Access Management",
+ "name": "Event Permission",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

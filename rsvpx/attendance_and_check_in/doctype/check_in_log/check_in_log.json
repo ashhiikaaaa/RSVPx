@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-17 16:11:15.119475",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "event",
+  "participant",
+  "qr_pass",
+  "gate",
+  "check_in_time",
+  "column_break_vcan",
+  "scanned_by",
+  "scan_time",
+  "scan_result",
+  "checked_in_by",
+  "device_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "participant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant",
+   "options": "Participant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qr_pass",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "QR Pass",
+   "options": "QR Pass",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gate",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gate",
+   "options": "Gate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vcan",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scanned_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Scanned By",
+   "options": "Event Team Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scan_time",
+   "fieldtype": "Datetime",
+   "label": "Scan Time"
+  },
+  {
+   "fieldname": "scan_result",
+   "fieldtype": "Select",
+   "label": "Scan Result",
+   "options": "Pending\nSuccess\nDuplicate\nInvalid\nRejected",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "label": "Event",
+   "options": "RSVPX Event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "check_in_time",
+   "fieldtype": "Datetime",
+   "label": "Check In Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "checked_in_by",
+   "fieldtype": "Link",
+   "label": "Checked In By",
+   "options": "Event User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "device_id",
+   "fieldtype": "Data",
+   "label": "Device ID"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-21 14:02:19.848508",
+ "modified_by": "Administrator",
+ "module": "Attendance and Check-In",
+ "name": "Check In log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gatekeeper",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Team Member",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2026-06-17 16:13:03.523134",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "event",
+  "invite_category",
+  "allocation_status",
+  "column_break_rjsm",
+  "invite_code",
+  "invitee_name",
+  "email",
+  "mobile"
+ ],
+ "fields": [
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Event",
+   "options": "RSVPX Event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invite_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Invite Category",
+   "options": "Invite Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "allocation_status",
+   "fieldtype": "Select",
+   "label": "Allocation Status",
+   "options": "Allocated\nInvite Sent\nAccepted\nDeclined\nCancelled"
+  },
+  {
+   "fieldname": "column_break_rjsm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invitee_name",
+   "fieldtype": "Data",
+   "label": "Invitee Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "invite_code",
+   "fieldtype": "Data",
+   "label": "Invite Code",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-07 12:19:19.522500",
+ "modified_by": "Administrator",
+ "module": "Invitation Management",
+ "name": "Invite Allocation",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Team Member",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "invite_code"
+}

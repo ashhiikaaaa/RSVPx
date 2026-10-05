@@ -1,0 +1,323 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:form_code",
+ "creation": "2026-06-17 16:06:52.668626",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "form_name",
+  "event",
+  "description",
+  "column_break_ucny",
+  "form_code",
+  "status",
+  "open_date",
+  "close_date",
+  "section_break_onmc",
+  "form_category",
+  "custom",
+  "column_break_noil",
+  "registration_type",
+  "section_break_tptp",
+  "fields",
+  "registration_settings_section",
+  "allow_edit_after_submit",
+  "approval_required",
+  "auto_approve",
+  "column_break_nryy",
+  "max_submissions",
+  "section_break_obhp",
+  "allow_team_registration",
+  "column_break_okqb",
+  "maximum_team_size",
+  "minimum_t",
+  "section_break_ytxv",
+  "payment_required",
+  "column_break_bhcx",
+  "amount",
+  "currency",
+  "section_break_ngnw",
+  "otp_required",
+  "whatsapp_enabled",
+  "email_enabled",
+  "redirect_url",
+  "success_message"
+ ],
+ "fields": [
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Event",
+   "options": "RSVPX Event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "form_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Form Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ucny",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nReady for Review\nPublished\nArchived\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Registration Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_edit_after_submit",
+   "fieldtype": "Check",
+   "label": "Allow edit after submit"
+  },
+  {
+   "default": "0",
+   "fieldname": "approval_required",
+   "fieldtype": "Check",
+   "label": "Approval required"
+  },
+  {
+   "fieldname": "column_break_nryy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "max_submissions",
+   "fieldtype": "Int",
+   "label": "Max Submissions"
+  },
+  {
+   "fieldname": "open_date",
+   "fieldtype": "Date",
+   "label": "Open Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "close_date",
+   "fieldtype": "Date",
+   "label": "Close Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "form_code",
+   "fieldtype": "Data",
+   "label": "Form Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_onmc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "form_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Form Category",
+   "options": "Participant\nVolunteer\nSpeaker\nJudge\nSponsor\nVIP\nCreator\nAttendee\nCustom"
+  },
+  {
+   "fieldname": "registration_type",
+   "fieldtype": "Select",
+   "label": "Registration Type",
+   "options": "Individual\nTeam\nBoth"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_approve",
+   "fieldtype": "Check",
+   "label": "Auto Approve"
+  },
+  {
+   "fieldname": "section_break_obhp",
+   "fieldtype": "Section Break",
+   "label": "Team Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_team_registration",
+   "fieldtype": "Check",
+   "label": "Allow Team Registration"
+  },
+  {
+   "depends_on": "eval:doc.allow_team_registration==1",
+   "fieldname": "minimum_t",
+   "fieldtype": "Int",
+   "label": "Minimum Team Size"
+  },
+  {
+   "fieldname": "column_break_noil",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_okqb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.allow_team_registration==1",
+   "fieldname": "maximum_team_size",
+   "fieldtype": "Int",
+   "label": "Maximum Team Size"
+  },
+  {
+   "fieldname": "section_break_ytxv",
+   "fieldtype": "Section Break",
+   "label": "Payment Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_required",
+   "fieldtype": "Check",
+   "label": "Payment Required"
+  },
+  {
+   "fieldname": "column_break_bhcx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.payment_required==1",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "non_negative": 1,
+   "options": "currency"
+  },
+  {
+   "default": "INR",
+   "depends_on": "eval:doc.payment_required==1",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "section_break_ngnw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "otp_required",
+   "fieldtype": "Check",
+   "label": "OTP required"
+  },
+  {
+   "default": "0",
+   "fieldname": "whatsapp_enabled",
+   "fieldtype": "Check",
+   "label": "Whatsapp Enabled"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_enabled",
+   "fieldtype": "Check",
+   "label": "Email Enabled"
+  },
+  {
+   "fieldname": "redirect_url",
+   "fieldtype": "Data",
+   "label": "Redirect URL"
+  },
+  {
+   "fieldname": "success_message",
+   "fieldtype": "Text Editor",
+   "label": "Success Message"
+  },
+  {
+   "fieldname": "section_break_tptp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fields",
+   "fieldtype": "Table",
+   "label": "Fields",
+   "options": "Form Field"
+  },
+  {
+   "depends_on": "eval:doc.form_category==\"Custom\"",
+   "fieldname": "custom",
+   "fieldtype": "Data",
+   "label": "Custom"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-28 17:08:06.421619",
+ "modified_by": "Administrator",
+ "module": "Dynamic Form Builder",
+ "name": "Form Template",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Team Member",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
